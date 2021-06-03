@@ -7,7 +7,7 @@ export class CatController {
 
     @Get()
     getCatTop10() {
-        return this.service.getCatTop10();
+        return this.service.getCats();
     }
 
     @Put('/:id')

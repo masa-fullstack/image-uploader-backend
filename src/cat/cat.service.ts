@@ -10,12 +10,11 @@ export class CatService {
         private readonly catRepository: Repository<Cat> //追加！
     ) { }
 
-    getCatTop10() {
+    getCats() {
         return this.catRepository.find({
             order: {
                 searchedCount: 'DESC',
             },
-            take: 10
         })
     }
 
